@@ -7,14 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CustomerManager.ViewModel;
 
 namespace CustomerManager
 {
     public partial class LoginForm : Form
     {
+        private LoginViewModel viewModel;
         public LoginForm()
         {
             InitializeComponent();
+            viewModel = new LoginViewModel();
             versionNumerLabel.Text = "Version - " + Global.VersionNumber;
         }
 
@@ -25,14 +28,13 @@ namespace CustomerManager
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (usernameTextbox.Text == "yan" && passwordTextbox.Text == "")
+            if (viewModel.Connect(usernameTextbox.Text,passwordTextbox.Text))
             {
-                Global.CurrentUserName = "Yannick";
                 DialogResult = DialogResult.OK;
             }
             else
             {
-                DialogResult = DialogResult.Cancel;
+                MessageBox.Show("Aucun utilisateur trouvé!");
             }
 
         }

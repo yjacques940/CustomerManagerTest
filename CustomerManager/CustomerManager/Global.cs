@@ -10,6 +10,7 @@ namespace CustomerManager
     {
         public static string VersionNumber { get; set; } = "0.0.0.1";
         public static string CurrentUserName { get; set; }
+        public static string CurrentUserLastName { get; set; }
         public static string CurrentUserId { get; set; }
     }
 }

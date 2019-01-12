@@ -158,6 +158,7 @@
             this.addCustomerButton.TabIndex = 8;
             this.addCustomerButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.addCustomerButton.UseVisualStyleBackColor = true;
+            this.addCustomerButton.Click += new System.EventHandler(this.addCustomerButton_Click);
             // 
             // MainMenu
             // 

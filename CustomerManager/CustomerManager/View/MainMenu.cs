@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CustomerManager.View;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -28,6 +29,14 @@ namespace CustomerManager
         private void appointmentManagerButton_Click(object sender, EventArgs e)
         {
             using (var form = new MdiAppointmentManagerForm())
+            {
+                form.ShowDialog();
+            }
+        }
+
+        private void addCustomerButton_Click(object sender, EventArgs e)
+        {
+            using (var form = new AddCustomerForm())
             {
                 form.ShowDialog();
             }

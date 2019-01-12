@@ -23,7 +23,6 @@ namespace CustomerManager
             {
                 form.MdiParent = this.MdiParent;
                 form.Show();
-                
             }
 
         }
